@@ -16,15 +16,15 @@
             font-size: 20px;
             background-color: aliceblue;
             border-radius: 15px;
-            border: 5px double black;
+            border: 5px double white;
         }
         .dice-roller-container{
-            background-color: rgb(251, 251, 19);
-            width: 200px;
+            background-color:rgb(240, 103, 103);
+            width: 220px;
             display: block;
             margin: 15px auto;
             margin-top: 30px;
-            border: 7px double black;
+            border: 7px double white;
             padding: 10px;
             border-radius: 15px;
             box-shadow: 1px 1px 2px 1px gray;
@@ -36,6 +36,8 @@
         }
         .dice-text{
             text-align: center;
+            font-size: 40px;
+            color: white;
         }
         .btn-roll{
             width: 150px;
@@ -45,7 +47,7 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: 25px;
             padding: 7px;
-            margin-left: 25px;
+            margin-left: 35px;
         }
     </style>
 </head>
@@ -54,7 +56,7 @@
         <h2>Dice Roller Game🎲</h2>
     </div>
     <div class="dice-roller-container">
-       <img src="" class="dice" id="dice" />
+       <img src="./dice1.png" class="dice" id="dice" />
        <h1 class="dice-text">0</h1>
        <button class="btn-roll" onclick="roll()">Roll Dice🎲</button>
     </div>
