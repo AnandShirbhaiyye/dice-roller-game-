@@ -61,7 +61,19 @@
        <button class="btn-roll" onclick="roll()">Roll Dice🎲</button>
     </div>
     <script>
+        function roll(){
+            const min = 1;
+            const max = 6;
+            const number = Math.floor(Math.random()*(max - min + 1)) + min;
 
+            document.getElementById("dice-text").innerHTML = number;
+
+            const diceImg = document.getElementById("dice");
+
+            const diceImages = ["./dice1.png", "./dice2.png", "./dice3.png", "./dice4.png", "./dice5.png", "./dice6.png",];
+
+            diceImg.src = diceImages[number-1];
+        }
     </script>
 </body>
 </html>
