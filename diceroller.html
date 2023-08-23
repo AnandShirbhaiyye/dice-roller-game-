@@ -34,7 +34,7 @@
             margin: 10px auto;
             display: block;
         }
-        .dice-text{
+        #dice-text{
             text-align: center;
             font-size: 40px;
             color: white;
@@ -49,6 +49,16 @@
             padding: 7px;
             margin-left: 35px;
         }
+        @media screen and (max-width: 600px) {
+            .roller-game{
+                width: 350px;
+            }
+        }
+        @media screen and (min-width: 600px) and (max-width: 800px) {
+            .roller-game{
+                width: 550px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -57,14 +67,14 @@
     </div>
     <div class="dice-roller-container">
        <img src="./dice1.png" class="dice" id="dice" />
-       <h1 class="dice-text">0</h1>
-       <button class="btn-roll" onclick="roll()">Roll Dice🎲</button>
+       <h1 id="dice-text">0</h1>
+       <button class="btn-roll" onclick="rollUp()">Roll Dice🎲</button>
     </div>
     <script>
-        function roll(){
+        function rollUp(){
             const min = 1;
             const max = 6;
-            const number = Math.floor(Math.random()*(max - min + 1)) + min;
+            const number = Math.floor(Math.random() * (max - min + 1)) + min;
 
             document.getElementById("dice-text").innerHTML = number;
 
